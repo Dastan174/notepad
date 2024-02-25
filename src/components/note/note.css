@@ -1,0 +1,79 @@
+#add-note {
+  padding: 40px 0;
+  background: rgb(152, 152, 237);
+  height: 700px;
+}
+.add-note {
+  margin-left: 500px;
+  margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 350px;
+  height: 400px;
+  background: #fff;
+}
+.add-note h2 {
+  font-size: 27px;
+  font-family: sans-serif;
+}
+.add-note input {
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+.add-note button {
+  padding: 10px 30px;
+  background: rgb(60, 60, 230);
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* note-item */
+
+#note-item {
+  padding: 40px 0;
+}
+.note-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 5px;
+  background: rgb(236, 236, 124);
+  padding: 10px;
+}
+.note-title {
+  width: 80%;
+}
+.note-title h1 {
+  font-size: 21px;
+  color: black;
+  font-family: sans-serif;
+}
+.note-title p {
+  padding-top: 7px;
+  font-size: 16px;
+  color: rgb(148, 145, 145);
+  font-family: sans-serif;
+}
+
+.note-btns {
+  width: 15%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.note-btns button {
+  padding: 5px 10px;
+  background: rgb(226, 14, 14);
+  border: none;
+  border-radius: 5px;
+}
