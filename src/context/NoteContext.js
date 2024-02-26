@@ -1,7 +1,6 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
-
-// это якобы конструкция контекста 
+// это якобы конструкция контекста
 const noteContext = createContext();
 export const useNotes = () => useContext(noteContext);
 
@@ -17,6 +16,19 @@ const NoteContext = ({ children }) => {
     setNote([...note, newNote]);
   }
 
+  // функция для хранения заметок в localstorage после обновления сайта не будет исчезать
+
+  useEffect(() => {
+    const savedNotes = localStorage.getItem("notes");
+    if (savedNotes) {
+      setNote(JSON.parse(savedNotes));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(note));
+  }, [note]);
+
   // функция для удаления заметки
   // параметр id нужен для удаления ту самую заметку
 
@@ -24,6 +36,17 @@ const NoteContext = ({ children }) => {
     const deletedNote = note.filter((el) => el.id !== id);
     setNote(deletedNote);
   }
+
+  const editNote = (id, newNote) => {
+    const editedNote = note.map((el) => {
+      if (el.id === id) {
+        return newNote;
+      }else{
+        return note
+      }
+    });
+    setNote(editedNote);
+  };
 
   // values это доставщик для всем комнонентам, внутри него написаны
   // функции или данные которую мы будем использовать в другом компоненте

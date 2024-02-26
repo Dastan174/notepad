@@ -8,7 +8,15 @@ const NoteList = () => {
   return (
     <div>
       <Main />
-      <h1 style={{ textAlign: "center" }}>Заметки</h1>
+      <h1
+        style={{
+          textAlign: "center",
+          fontFamily: "sans-serif",
+          paddingTop: "20px",
+        }}
+      >
+        Заметки
+      </h1>
       {note.map((el) => (
         <NoteItem el={el} />
       ))}

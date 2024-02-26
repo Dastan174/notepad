@@ -3,7 +3,7 @@ import "./App.css";
 import Main from "./components/main/Main";
 import NoteList from "./components/note/NoteList";
 import AddNote from "./components/note/AddNote";
-import NoteContext from "./context/NoteContext";
+import EditNote from "./components/note/EditNote";
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/add-note" element={<AddNote />} />
           <Route path="/note-list" element={<NoteList />} />
+          <Route path="/edit/:id" element={<EditNote/>}/>
         </Routes>
       </div>
   );

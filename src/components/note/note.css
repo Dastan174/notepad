@@ -72,8 +72,51 @@
   flex-direction: column;
 }
 .note-btns button {
-  padding: 5px 10px;
+  width: 100px;
+  height: 30px;
   background: rgb(226, 14, 14);
   border: none;
   border-radius: 5px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+/* edit-note */
+
+#edit-note {
+  padding: 40px 0;
+  background: rgb(152, 152, 237);
+  height: 700px;
+}
+.edit-note {
+  margin-left: 500px;
+  margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 350px;
+  height: 400px;
+  background: #fff;
+}
+.edit-note h2 {
+  font-size: 27px;
+  font-family: sans-serif;
+}
+.edit-note input {
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+.edit-note button {
+  padding: 10px 30px;
+  background: rgb(60, 60, 230);
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
